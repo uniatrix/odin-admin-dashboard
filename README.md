@@ -1,5 +1,6 @@
 # Admin Dashboard
-Overview
+
+##Overview
 This project is an Admin Dashboard for an assigment of The Odin Project. It offers a sleek, user-friendly interface with a navigation drawer, navbar, main content area, and side content sections.
 
 ## Features
