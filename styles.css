@@ -8,10 +8,10 @@
   --transition-speed: 1s;
   --drawer-color: #0ea5e9;
   --drawer-width: clamp(210px, 22vw, 325px);
-  --nav-bg-1: #f8f8f8;
+  --nav-bg-1: #e5e4e4;
   --nav-color-1: #c9c9c9;
   --nav-bg-2: #62daff6e;
-  --blue-1: #084c561;
+  --blue-1: #084c61;
   --avatar: url("https://github.com/uniatrix.png");
   --avatar2: url("https://github.com/james.png");
   --avatar3: url("https://github.com/bob.png");
@@ -101,12 +101,110 @@ body {
   padding-top: 10px;
 }
 
+/* Navbar Styling */
 .navbar {
   grid-area: nav;
   transition: var(--transition-notDrawer);
+  background-color: var(--nav-bg-1);
+  padding: 1.5rem 3rem;
+  border-bottom: p2x solid rgb(219, 219, 219);
+}
+
+.topNav {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  margin-bottom: 2.5rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  width: 100%;
+}
+
+.search > input {
+  display: inline-block;
+  border: 0;
+  background-color: var(--nav-color-1);
+  padding: 0.5rem 1.5rem;
+  outline-color: var(--blue-1);
+  margin-left: 1.25rem;
+  border-radius: 5px;
+  width: min(80%, 600px);
+  margin-right: 20px;
+}
+
+.navbar .account {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.avatar {
+  background: var(--avatar) center center / cover no-repeat;
+  border-radius: 50%;
+}
+
+.account .avatar {
+  margin: 0 1rem 0 2.5rem;
+  height: 40px;
+  width: 40px;
+  display: flex;
 }
 
 .content {
   grid-area: content;
   transition: var(--transition-notDrawer);
+}
+
+img {
+  cursor: pointer;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile .avatar {
+  width: 75px;
+  height: 75px;
+}
+
+.greeting {
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.profile .name {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  background-color: var(--drawer-color);
+  color: var(--text-secondary);
+  font-weight: 800;
+  padding: 0.5rem 1.8rem;
+  border-radius: 5px;
+  font-size: 20px;
+  border: 1px solid grey;
+  cursor: pointer;
 }
